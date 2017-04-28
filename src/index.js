@@ -9,6 +9,7 @@ import reducer from './reducers'
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import './index.css';
+import {responsiveStoreEnhancer} from 'redux-responsive';
 
 // Needed for onTouchTap
 // http://stackoverflow.com/a/34015469/988941
@@ -21,7 +22,8 @@ if (process.env.NODE_ENV !== 'production') {
 
 const store = createStore(
   reducer,
-  applyMiddleware(...middleware)
+  applyMiddleware(...middleware),
+  responsiveStoreEnhancer
 )
 
 render(

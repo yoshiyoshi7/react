@@ -5,22 +5,22 @@ import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 
 let AddTodo = ({ dispatch }) => {
-  let inText
+  let input
 
   return (
     <div>
       <form onSubmit={e => {
         e.preventDefault()
-        if (!inText.input.value.trim()) {
+        if (!input.value.trim()) {
           return
         }
-        dispatch(addTodo(inText.input.value))
-        inText.input.value = ''
+        dispatch(addTodo(input.value))
+        input.value = ''
       }}>
         <TextField 
         id="todo-title"
         ref={node => {
-          inText = node
+          input = node.input
         }} />
         <RaisedButton type="submit" label="Add Todo"/>
       </form>
