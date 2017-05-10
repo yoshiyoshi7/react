@@ -1,7 +1,8 @@
 import React from 'react'
-import Footer from './Footer'
-import AddTodo from '../containers/AddTodo'
-import VisibleTodoList from '../containers/VisibleTodoList'
+// import Footer from './Footer'
+// import AddTodo from '../containers/AddTodo'
+// import VisibleTodoList from '../containers/VisibleTodoList'
+import ItemList from '../containers/ItemList'
 import {
   ResponsiveDrawer,
   BodyContainer,
@@ -47,11 +48,9 @@ const App = () => (
         title={'Responsive Material-UI Drawer DEMO'}
         iconElementRight={<FlatButton label="Demo" />}
       />
-      <div style={{margin:'10px'}}>
+      <div style={{ margin: '10px' }}>
         <h1 style={styles.body_header}>Body</h1>
-        <AddTodo />
-        <VisibleTodoList />
-        <Footer />
+        <ItemList />
       </div>
     </BodyContainer>
 
@@ -59,3 +58,7 @@ const App = () => (
 )
 
 export default App
+
+// <AddTodo />
+// <VisibleTodoList />
+// <Footer />
