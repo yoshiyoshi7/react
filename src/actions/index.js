@@ -21,7 +21,7 @@ export const toggleTodo = (id) => ({
 
 export const selectReddit = reddit => ({
   type: SELECT_REDDIT,
-  reddit: 'reactjs'
+  reddit
 })
 
 export const requestPosts = reddit => ({
