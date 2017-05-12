@@ -2,7 +2,7 @@ import React from 'react'
 import Footer from './Footer'
 import AddTodo from '../containers/AddTodo'
 import VisibleTodoList from '../containers/VisibleTodoList'
-import Menu from './Menu'
+import Menu from '../containers/Menu'
 import ItemList from '../containers/ItemList'
 import {
   BodyContainer,
@@ -29,9 +29,9 @@ const App = () => (
         <h1 style={styles.body_header}>Body</h1>
         <ItemList />
       </div>
-<AddTodo />
- <VisibleTodoList />
- <Footer />
+      <AddTodo />
+      <VisibleTodoList />
+      <Footer />
     </BodyContainer>
   </div>
 )

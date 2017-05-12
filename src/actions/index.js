@@ -36,7 +36,7 @@ export const receivePosts = (reddit, json) => ({
 
 const fetchPosts = reddit => dispatch => {
   dispatch(requestPosts(reddit), {mode: 'cors'})
-  return fetch(`http://localhost:3000/items_its`)
+  return fetch(`http://localhost:3000/items_${reddit}`)
     .then(response => response.json())
     .then(json => dispatch(receivePosts(reddit, json)))
 }

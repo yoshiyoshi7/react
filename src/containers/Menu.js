@@ -23,12 +23,11 @@ let Menu = ({ dispatch }) => {
     <ResponsiveDrawer>
       <div style={styles.drawer_container}>
         <div style={styles.drawer_header_container}>
-          <h1 style={styles.drawer_header}>Menu</h1>
-
+          <h1 style={styles.drawer_header}>カテゴリ</h1>
           <MenuItem
-            primaryText="IT" onTouchTap={() => dispatch(selectReddit("IT"))}/>
-          <MenuItem>Menu Item 2</MenuItem>
-
+            primaryText="IT" onTouchTap={() => dispatch(selectReddit("its"))}/>
+          <MenuItem
+            primaryText="SOCIALGAME" onTouchTap={() => dispatch(selectReddit("socialgames"))}/>
         </div>
       </div>
     </ResponsiveDrawer>
