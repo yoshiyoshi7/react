@@ -28,6 +28,10 @@ let Menu = ({ dispatch }) => {
             primaryText="IT" onTouchTap={() => dispatch(selectReddit("its"))}/>
           <MenuItem
             primaryText="SOCIALGAME" onTouchTap={() => dispatch(selectReddit("socialgames"))}/>
+            <MenuItem
+            primaryText="新着" onTouchTap={() => dispatch(selectReddit("socialgames"))}/>
+            <MenuItem
+            primaryText="ランキング" onTouchTap={() => dispatch(selectReddit("socialgames"))}/>
         </div>
       </div>
     </ResponsiveDrawer>
