@@ -24,7 +24,7 @@ const Posts = ({ posts }) => (
             key={post.title}
             leftAvatar={<Avatar src={post.img} />}
             primaryText={post.title}
-            secondaryText={post.site}
+            secondaryText={post.site + " " + new Date(post.updated_at).toLocaleString()}
           />
         </a>
       )}
@@ -38,3 +38,6 @@ Posts.propTypes = {
 }
 
 export default Posts
+
+// document.write of react
+// <div dangerouslySetInnerHTML={{__html: post.data}} />
