@@ -5,7 +5,6 @@ import {
   BodyContainer,
   ResponsiveAppBar
 } from 'material-ui-responsive-drawer'
-import FlatButton from 'material-ui/FlatButton';
 import IconMenu from 'material-ui/IconMenu';
 import MenuItem from 'material-ui/MenuItem';
 import IconButton from 'material-ui/IconButton';
@@ -44,11 +43,7 @@ const App = () => (
             anchorOrigin={{ horizontal: 'right', vertical: 'top' }}
             targetOrigin={{ horizontal: 'right', vertical: 'top' }}
           >
-            <MenuItem primaryText="Refresh" />
-            <MenuItem primaryText="Send feedback" />
-            <MenuItem primaryText="Settings" />
-            <MenuItem primaryText="Help" />
-            <MenuItem primaryText="Sign out" />
+            <MenuItem primaryText="Comming Soon..." />
           </IconMenu>
         }
       />

@@ -1,12 +1,13 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { ResponsiveDrawer } from 'material-ui-responsive-drawer'
+import { ResponsiveDrawer, toggleDrawerOpen } from 'material-ui-responsive-drawer'
 import MenuItem from 'material-ui/MenuItem';
 import { selectReddit } from '../actions'
 
 const styles = {
   drawer_container: {
-    height: '100%'
+    height: '100%',
+    backgroundColor: '#fafafa',
   },
   drawer_header: {
     margin: '0px',
@@ -14,6 +15,14 @@ const styles = {
   },
   drawer_header_container: {
     padding: '10px'
+  }
+}
+
+// スマホ時にカテゴリを閉じる+カテゴリ選択
+function selectCtegory(category) {
+  return dispatch => {
+    dispatch(toggleDrawerOpen())
+    dispatch(selectReddit(category))
   }
 }
 
@@ -25,25 +34,25 @@ let Menu = ({ dispatch }) => {
         <div style={styles.drawer_header_container}>
           <h1 style={styles.drawer_header}>カテゴリ</h1>
           <MenuItem
-            primaryText="IT・ガジェット" onTouchTap={() => dispatch(selectReddit("its"))} />
+            primaryText="IT・ガジェット" onTouchTap={() => dispatch(selectCtegory("its"))} />
           <MenuItem
-            primaryText="ソーシャルゲーム" onTouchTap={() => dispatch(selectReddit("socialgames"))} />
+            primaryText="ソーシャルゲーム" onTouchTap={() => dispatch(selectCtegory("socialgames"))} />
           <MenuItem
-            primaryText="新着" onTouchTap={() => dispatch(selectReddit("new"))} />
+            primaryText="ニュース" onTouchTap={() => dispatch(selectCtegory("news"))} />
           <MenuItem
-            primaryText="ランキング" onTouchTap={() => dispatch(selectReddit("ranking"))} />
+            primaryText="アニメ・ゲーム" onTouchTap={() => dispatch(selectCtegory("animegames"))} />
           <MenuItem
-            primaryText="ニュース" onTouchTap={() => dispatch(selectReddit("news"))} />
+            primaryText="スポーツ" onTouchTap={() => dispatch(selectCtegory("sports"))} />
           <MenuItem
-            primaryText="アニメ・ゲーム" onTouchTap={() => dispatch(selectReddit("animegames"))} />
+            primaryText="生活" onTouchTap={() => dispatch(selectCtegory("lives"))} />
           <MenuItem
-            primaryText="スポーツ" onTouchTap={() => dispatch(selectReddit("sports"))} />
+            primaryText="芸能" onTouchTap={() => dispatch(selectCtegory("entertainers"))} />
           <MenuItem
-            primaryText="生活" onTouchTap={() => dispatch(selectReddit("lives"))} />
+            primaryText="Comming Soon..." onTouchTap={() => dispatch(selectCtegory("overseas"))} />
           <MenuItem
-            primaryText="芸能" onTouchTap={() => dispatch(selectReddit("entertainers"))} />
+            primaryText="Comming Soon..." onTouchTap={() => dispatch(selectCtegory("new"))} />
           <MenuItem
-            primaryText="海外" onTouchTap={() => dispatch(selectReddit("overseas"))} />
+            primaryText="Comming Soon..." onTouchTap={() => dispatch(selectCtegory("ranking"))} />
         </div>
       </div>
     </ResponsiveDrawer>
@@ -52,4 +61,5 @@ let Menu = ({ dispatch }) => {
 }
 Menu = connect()(Menu)
 
-export default Menu
+export default connect(
+)(Menu);

@@ -30,7 +30,7 @@ class ItemList extends Component {
           {isEmpty
             ? <h2>Loading...</h2>
             : <div>
-              <Posts posts={posts} />
+              <Posts selectedReddit={selectedReddit} posts={posts} />
             </div>
           }
       </div>

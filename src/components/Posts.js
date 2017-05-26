@@ -12,11 +12,11 @@ const styles = {
   }
 }
 
-const Posts = ({ posts }) => (
+const Posts = ({selectedReddit,posts}) => (
 
   <Paper zDepth={5}>
     <List>
-      <Subheader>Recent chats</Subheader>
+      <Subheader>{selectedReddit}</Subheader>
       <Divider />
       {posts.map((post) =>
         <a href={post.url} style={styles.a_container}>
@@ -34,7 +34,8 @@ const Posts = ({ posts }) => (
 )
 
 Posts.propTypes = {
-  posts: PropTypes.array.isRequired
+  posts: PropTypes.array.isRequired,
+  selectedReddit: PropTypes.string.isRequired,
 }
 
 export default Posts
