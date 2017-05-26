@@ -21,6 +21,7 @@
     "redux-responsive": "^4.3.1",
     "redux-thunk": "^2.1.0"
   },
+  // npm start,npm run build,
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
