@@ -21,7 +21,7 @@ const Posts = ({selectedReddit,posts}) => (
       {posts.map((post) =>
         <a href={post.url} style={styles.a_container}>
           <ListItem
-            key={post.title}
+            key={post.id}
             leftAvatar={<Avatar src={post.img} />}
             primaryText={post.title}
             secondaryText={post.site + " " + new Date(post.updated_at).toLocaleString()}
