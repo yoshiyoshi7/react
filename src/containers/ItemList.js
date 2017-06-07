@@ -5,8 +5,7 @@ import { fetchPostsIfNeeded } from '../actions'
 import Posts from '../components/Posts'
 
 class ItemList extends Component {
-
-  static propTypes = {
+    static propTypes = {
     selectedReddit: PropTypes.string.isRequired,
     posts: PropTypes.array.isRequired,
     dispatch: PropTypes.func.isRequired
@@ -24,16 +23,16 @@ class ItemList extends Component {
   }
 
   render() {
-    const { selectedReddit, posts } = this.props
+    const {selectedReddit,posts} = this.props
     const isEmpty = posts.length === 0
     return (
       <div>
-        {isEmpty
-          ? <h2>Loading...</h2>
-          : <div>
-            <Posts selectedReddit={selectedReddit} posts={posts} />
-          </div>
-        }
+          {isEmpty
+            ? <h2>Loading...</h2>
+            : <div>
+              <Posts selectedReddit={selectedReddit} posts={posts} />
+            </div>
+          }
       </div>
     )
   }
